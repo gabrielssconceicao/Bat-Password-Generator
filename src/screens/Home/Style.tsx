@@ -16,6 +16,11 @@ import { StyleSheet } from 'react-native';
     paddingTop: 20,
     marginBottom: 60,
     backgroundColor: '#4d4d4d'
+  },
+  inputContainer: {
+    width: '80%',
+    alignItems: 'center',
+    flexDirection: 'column',
   }
 });
 
