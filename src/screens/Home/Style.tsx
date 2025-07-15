@@ -1,12 +1,22 @@
 import { StyleSheet } from 'react-native';
 
  const styles = StyleSheet.create({
-  container: {
+  appContainer: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#333',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  logoContainer: {
+    flexDirection: 'column',
+    borderColor: '#fff',
+    borderWidth: 2,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    paddingTop: 20,
+    marginBottom: 60,
+    backgroundColor: '#4d4d4d'
+  }
 });
 
 export default styles
