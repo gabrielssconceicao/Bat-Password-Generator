@@ -8,33 +8,25 @@
   
   <!-- project badges -->
   <p align="center">
- <!--
-   <img 
+    <img 
       alt="Project programing languages count" 
-      src="https://img.shields.io/github/languages/count/felipeAguiarCode/node-js-bulk-downloader?color=6A57D5"
+      src="https://img.shields.io/github/languages/count/gabrielssconceicao/Bat-Password-Generator?color=6A57D5"
     >
- -->
-  <!--
     <img 
       alt="Last commit on GitHub" 
-      src="https://img.shields.io/github/last-commit/felipeAguiarCode/node-js-bulk-downloader?color=6A57D5"
-    >
-  -->
-    <img 
-      alt="Made by Felipe Aguiar" 
-      src="https://img.shields.io/badge/made%20by-Felipe%20Aguiar-%20?color=6A57D5"
+      src="https://img.shields.io/github/last-commit/gabrielssconceicao/Bat-Password-Generator?color=6A57D5"
     >
     <img 
       alt="Project top programing language" 
-      src="https://img.shields.io/github/languages/top/felipeAguiarCode/react-native-bat-pass-generator?color=6A57D5"
+      src="https://img.shields.io/github/languages/top/gabrielssconceicao/Bat-Password-Generator?color=6A57D5"
     >
     <img 
       alt="Repository size" 
-      src="https://img.shields.io/github/repo-size/felipeAguiarCode/react-native-bat-pass-generator?color=6A57D5"
+      src="https://img.shields.io/github/repo-size/gabrielssconceicao/Bat-Password-Generator?color=6A57D5"
     >
     <img 
       alt="GitHub license" 
-      src="https://img.shields.io/github/license/felipeAguiarCode/react-native-bat-pass-generator?color=6A57D5"
+      src="https://img.shields.io/github/license/gabrielssconceicao/Bat-Password-Generator?color=6A57D5"
     >
   </p> 
 
@@ -47,16 +39,6 @@
       <strong>Go to usage now »</strong>
     </a>
     <br />
-    <br />
-    <a 
-      href="https://github.com/felipeAguiarCode/react-native-bat-pass-generator/issues">
-      Report Bug
-    </a>
-    ·
-    <a 
-      href="https://github.com/felipeAguiarCode/react-native-bat-pass-generator/issues/new">
-      Request Feature
-    </a>
   </p>
 </div>
 
@@ -70,9 +52,17 @@
 
 ## 🔥 Features
 - [x] Generate a random Strong Password;
+- [x]  Generate a strong random password
+- [x] Choose password length using slider
+- [x] Toggle inclusion of:
+    - Lower case letters
+    - Upper case letters
+    - Symbols
+    - Numbers
+- [x] Clean UI
 - [x] Copy Pass to Clipboard;
 
-## Technologies
+## **Technologies**
 
 This project was developed with the following technologies:
 
@@ -86,7 +76,7 @@ This project was developed with the following technologies:
 You'll need [Node.js](https://nodejs.org) installed on your computer in order to build this app.
 
 ```bash
-git clone https://github.com/felipeAguiarCode/react-native-bat-pass-generator.git
+git clone https://github.com/gabrielssconceicao/Bat-Password-Generator.git
 $ cd react-native-bat-pass-generator
 $ npm install
 $ npm run start
@@ -101,9 +91,3 @@ $ npm run start
 ```
 
 Runs the app in the development mode.<br/>
-
-## Autor
-
-| [<img src="https://avatars3.githubusercontent.com/u/37452836?s=96&v=4"><br><sub>Felipe Aguiar</sub>](https://github.com/felipeAguiarCode) |
-| :---------------------------------------------------------------------------------------------------------------------------------------: |
-|                                             [Linkedin](www.linkedin.com/in/felipe-aguiar-exe)                                             |

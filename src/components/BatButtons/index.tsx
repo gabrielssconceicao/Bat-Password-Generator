@@ -1,31 +1,37 @@
 import React, { useState } from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 import * as Clipboard from 'expo-clipboard';
 
-import { styles } from './BatButtonStyles';
+import { styles } from './styles';
 import { CheckBox } from '../CheckBox';
-import { BatTextInput } from '../BatTextInput/BatTextInput';
-import generatePassword from '../../services/passwordService';
+import { BatTextInput } from '../BatTextInput';
 import { SliderBar } from '../SliderBar';
+import { StrengthBar } from '../StrengthBar';
+import generatePassword from '../../services/passwordService';
+import { passwordStrength } from '../../services/passwordStrength';
+import { Options } from '../../services/enums';
 
-export function BatButton() {
+export function BatButtons() {
   const [password, setPassword] =useState('');
   const [sliderValue, setSliderValue] = useState(6);
   const [options,setOptions] = useState([
-    { id: 2, label: 'Lowercase', checked: true },
-    { id: 1, label: 'Uppercase', checked: false },
-    { id: 3, label: 'Numbers', checked: false },
-    { id: 4, label: 'Symbols', checked: false },
+    { id: 2, label: Options.Lowercase, checked: true },
+    { id: 1, label: Options.Uppercase, checked: false },
+    { id: 3, label: Options.Numbers, checked: false },
+    { id: 4, label: Options.Symbols, checked: false },
   ])
 
   function handleGeneratePassword() {
     const generatedPassword = generatePassword({
-      options,size:sliderValue
+      options,
+      size:sliderValue
     });
     setPassword(generatedPassword);
   }
 
   function handleSliderChange(value: number) {
+    setPassword('');
+    console.log(value);
     handleGeneratePassword();
     setSliderValue(value);
   };
@@ -35,7 +41,7 @@ export function BatButton() {
   }
 
   function handleCheckOption(id: number) {
-    
+    setPassword('');
     const newOptions = [...options];
     newOptions.forEach((option) => {
       if (option.id === id) {
@@ -49,9 +55,7 @@ export function BatButton() {
 
   return (
     <>  
-        <View style={{height: 20, width: '100%', backgroundColor: '#4d4d4d',borderRadius: 10,marginBottom: 10}}>
-          <View style={{height: 20, width: `${(sliderValue/64)*100}%`,backgroundColor: '#e5bf3c',borderRadius: 10}}/>  
-        </View>
+        <StrengthBar strength={passwordStrength({options,size:sliderValue})}/>
         <BatTextInput password={password}/>
         <SliderBar onValueChange={handleSliderChange} value={sliderValue}/>
         <CheckBox options={options} handleCheckOption={handleCheckOption}/>

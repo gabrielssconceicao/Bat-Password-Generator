@@ -15,6 +15,8 @@ export function SliderBar({onValueChange,value}: SliderBarProps) {
         style={styles.slider}
         minimumValue={6} 
         maximumValue={64}
+        lowerLimit={6}
+        upperLimit={64}
         step={1}
         minimumTrackTintColor="#e5bf3c"
         maximumTrackTintColor="#fff"
