@@ -14,14 +14,17 @@ enum Options {
   Symbols = 'Symbols',
 }
 
+type GeneratedPasswordProps = {
+  options: Option[],
+  size: number
+}
 
-export default function generatePassword(options:Option[]) {
+export default function generatePassword({options,size}:GeneratedPasswordProps) {
  
   let password:string = '';
 
   const caracteres = options.map((op)=>separeteCharacters(op)).join('');
-  const PASSWORD_LENGTH = 8;
-  for (let index=0; index<PASSWORD_LENGTH; index++) {
+  for (let index=0; index<size; index++) {
     const randomIndex = Math.floor(Math.random() * caracteres.length);
     password += caracteres.charAt(randomIndex);
   }
