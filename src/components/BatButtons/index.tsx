@@ -31,7 +31,6 @@ export function BatButtons() {
 
   function handleSliderChange(value: number) {
     setPassword('');
-    console.log(value);
     handleGeneratePassword();
     setSliderValue(value);
   };
